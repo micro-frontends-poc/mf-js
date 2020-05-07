@@ -1,0 +1,32 @@
+version: "3"
+services:
+  container:
+    container_name: js-container
+    ports:
+      - "3020:3000"
+    build:
+      context: ./js-container
+      dockerfile: Dockerfile
+    volumes:
+      - "./js-container:/var/app"
+      - "/var/app/node_modules"
+  product:
+    container_name: js-product
+    ports:
+      - "3021:3001"
+    build:
+      context: ./js-product
+      dockerfile: Dockerfile
+    volumes:
+      - "./js-product:/var/app"
+      - "/var/app/node_modules"
+  cart:
+    container_name: js-cart
+    ports:
+      - "3022:4200"
+    build:
+      context: ./js-cart
+      dockerfile: Dockerfile
+    volumes:
+      - "./js-cart:/var/app"
+      - "/var/app/node_modules"
