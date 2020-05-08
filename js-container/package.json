@@ -10,8 +10,7 @@
     "react-dom": "^16.13.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
-    "source-map-explorer": "^2.3.1",
-    "vue": "^2.6.11"
+    "source-map-explorer": "^2.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -19,15 +18,13 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:styles": "postcss src/tailwind.css -o src/styles.css",
-    "prebuild": "NODE_ENV=production npm run build:styles",
+    "prebuild": "SET NODE_ENV=production & npm run build:styles",
     "prestart": "npm run build:styles"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "eslintIgnore": [
-    "src/webComponents"
-  ],
+  "eslintIgnore": [],
   "browserslist": {
     "production": [
       ">0.2%",
