@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Product from "./components/Product.vue"
+import Product from "./Product.vue"
 
 export default {
   name: "App",
@@ -76,11 +76,13 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 #app {
-  font-family: Arial, sans-serif;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding-top: 1rem;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
 </style>
