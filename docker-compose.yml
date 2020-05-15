@@ -10,6 +10,16 @@ services:
     volumes:
       - "./js-container:/var/app"
       - "/var/app/node_modules"
+  nav:
+    container_name: js-nav
+    ports:
+      - "3021:3001"
+    build:
+      context: ./js-nav
+      dockerfile: Dockerfile
+    volumes:
+      - "./js-nav:/var/app"
+      - "/var/app/node_modules"
   product:
     container_name: js-product
     ports:
