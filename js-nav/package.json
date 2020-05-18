@@ -8,9 +8,7 @@
     "test": "jest",
     "watch-tests": "jest --watch",
     "coverage": "jest --coverage",
-    "build:styles": "postcss src/tailwind.css -o src/styles.css",
-    "prebuild": "SET NODE_ENV=production & npm run build:styles",
-    "prestart": "npm run build:styles"
+    "prebuild": "SET NODE_ENV=production & npm run build:styles"
   },
   "husky": {
     "hooks": {

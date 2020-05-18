@@ -1,7 +1,7 @@
 <template>
   <div class="product" :class="mode">
     <div class="img-container"></div>
-    <h3>{{ product.name }}</h3>
+    <h3 class="text-lg font-bold">{{ product.name }}</h3>
     <p>{{ product.description }}</p>
     <span class="stock">{{ stock }}</span>
     <button class="btn-main" :disabled="product.stock == 0" @click="addToCart">
