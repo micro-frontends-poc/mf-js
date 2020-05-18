@@ -13,6 +13,7 @@
 <script>
 export default {
   props: ["product", "mode"],
+
   computed: {
     stock() {
       if (this.product.stock == 0) return "Out of stock"
@@ -22,7 +23,6 @@ export default {
   },
   methods: {
     addToCart() {
-      this.product.stock--
       this.$emit("addProduct", this.product)
     },
   },

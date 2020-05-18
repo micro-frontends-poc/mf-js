@@ -27,9 +27,11 @@ export class AppComponent {
   constructor() {}
 
   ngOnInit(): void {
-    this.subscription = singleSpaPropsSubject.subscribe(
-      (props) => (this.singleSpaProps = props)
-    );
+    this.subscription = singleSpaPropsSubject.subscribe((props) => {
+      this.singleSpaProps = props;
+      console.log(this.singleSpaProps.store.cart);
+      this.items = this.singleSpaProps.store.cart;
+    });
   }
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
@@ -42,30 +44,12 @@ export class AppComponent {
     this.isDarkMode = mode == 'dark';
   }
 
-  @Input('cartItems')
-  set cartItems(items: string) {
-    this.items = JSON.parse(items);
-  }
-
   removeItem(item: Item, i: Number) {
     console.log(i);
-    const removeEvent = new CustomEvent('cartItemRemoved', {
-      bubbles: true,
-      composed: true,
-      detail: {
-        index: i,
-        product: item,
-      },
-    });
-    this.container.nativeElement.dispatchEvent(removeEvent);
+    this.singleSpaProps.store.removeFromCart(item, i);
   }
 
   emptyCart() {
-    this.items.length = 0;
-    const paidEvent = new CustomEvent('paid', {
-      bubbles: true,
-      composed: true,
-    });
-    this.container.nativeElement.dispatchEvent(paidEvent);
+    this.singleSpaProps.store.emptyCart();
   }
 }
