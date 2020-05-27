@@ -83,7 +83,7 @@ export default {
 
   button {
     grid-area: button;
-    background: transparent;
+    background: var(--color-primary);
     color: var(--color-text);
     border-width: 2px;
     border-radius: 4px;

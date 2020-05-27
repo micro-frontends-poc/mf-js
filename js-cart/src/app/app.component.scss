@@ -21,12 +21,6 @@
     border-left: none;
   }
   .btn {
-    background: transparent;
-    color: var(--color-text);
-    border-width: 2px;
-    border-radius: 4px;
-    border-style: solid;
-    border-color: var(--color-text);
     line-height: 1rem;
     width: 2.5rem;
     height: 2.5rem;
@@ -36,12 +30,10 @@
     cursor: pointer;
     transition: all 0.5s;
     font-weight: bold;
+    padding: 0.5rem;
+    font-weight: bold;
     transition: box-shadow 0.5s ease-out;
-    &:hover {
-      transform: scale(1.01);
-      border-color: var(--color-primary);
-      box-shadow: -2px 2px 0px var(--color-secondary);
-    }
+
     &:focus {
       outline: none;
     }
@@ -51,6 +43,30 @@
       &:hover {
         box-shadow: none;
         border-color: var(--color-text);
+      }
+    }
+    &.btn-pay {
+      background: transparent;
+      color: var(--color-text);
+      margin-top: 1rem;
+      border-width: 2px;
+      border-radius: 4px;
+      border-style: solid;
+      border-color: var(--color-text);
+      width: 100%;
+      &:hover {
+        transform: scale(1.01);
+        border-color: var(--color-primary);
+        box-shadow: -2px 2px 0px var(--color-secondary);
+      }
+    }
+    &.btn-remove {
+      background: var(--color-primary);
+      color: var(--color-bg);
+      border-radius: 50%;
+      border-width: 0px;
+      &:hover {
+        background: lighten($color: #7500c0, $amount: 10%);
       }
     }
   }
@@ -75,21 +91,5 @@
       font-weight: bold;
       font-style: italic;
     }
-
-    .btn-remove {
-      border-color: #ff4848;
-      color: #ff4848;
-      &:hover {
-        transform: scale(1.01);
-        border-color: #ff4848;
-        box-shadow: none;
-      }
-    }
-  }
-  .btn-pay {
-    width: 100%;
-    padding: 0.5rem;
-    margin-top: 1rem;
-    font-weight: bold;
   }
 }

@@ -46,7 +46,6 @@ const createStore = () => {
     },
     removeFromCart(p, i) {
       cart.splice(i, 1)
-      console.log(p)
       products.find((x) => x.id === p.id).stock++
       subscribers.forEach((fn) => fn())
     },

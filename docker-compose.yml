@@ -3,7 +3,7 @@ services:
   container:
     container_name: js-container
     ports:
-      - "3020:3000"
+      - "3020:3003"
     build:
       context: ./js-container
       dockerfile: Dockerfile
@@ -13,7 +13,7 @@ services:
   nav:
     container_name: js-nav
     ports:
-      - "3021:3001"
+      - "3021:8501"
     build:
       context: ./js-nav
       dockerfile: Dockerfile
@@ -23,7 +23,7 @@ services:
   product:
     container_name: js-product
     ports:
-      - "3021:3001"
+      - "3021:3002"
     build:
       context: ./js-product
       dockerfile: Dockerfile

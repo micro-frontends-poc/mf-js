@@ -8,7 +8,7 @@ module.exports = {
       disableHostCheck: true,
       https: true,
       host: "localhost",
-      port: 8500,
+      port: 3002,
     },
     externals: ["vue", "vue-router", /^@mifro\/.+/],
   },
