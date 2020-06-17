@@ -13,7 +13,7 @@ services:
   nav:
     container_name: js-nav
     ports:
-      - "3021:8501"
+      - "3023:8501"
     build:
       context: ./js-nav
       dockerfile: Dockerfile

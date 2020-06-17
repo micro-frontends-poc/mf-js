@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "dev": "(cd js-container && npm run start) & (cd js-nav && npm run start) & (cd js-cart && npm run serve:single-spa:js-cart) & (cd js-product && npm run start)"
+  },
+  "dependencies": {
+    "concurrently": "^5.2.0"
+  }
+}

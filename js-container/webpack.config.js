@@ -17,7 +17,7 @@ module.exports = (webpackConfigEnv) => {
         "Access-Control-Allow-Origin": "*",
       },
       disableHostCheck: true,
-      port: 3003,
+      port: 9000,
     },
     devtool: "sourcemap",
     plugins: [
