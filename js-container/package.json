@@ -30,7 +30,7 @@
     "jest-cli": "^25.2.7",
     "prettier": "^2.0.3",
     "pretty-quick": "^2.0.1",
-    "serve": "^11.2.0",
+    "serve": "^11.3.2",
     "ts-config-single-spa": "^1.7.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
