@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Root Config</title>
+    <title>Microshop - JS</title>
     <!--
     Remove this if you only support browsers that support async/await.
     This is needed by babel to share largeish helper code for compiling async/await in older
@@ -46,7 +46,7 @@
         "imports": {
           "@mifro/root-config": "//localhost:9000/mifro-root-config.js",
           "@mifro/nav": "http://localhost:8501/mifro-nav.js",
-          "@mifro/products": "https://localhost:8500/js/app.js",
+          "@mifro/products": "https://localhost:3002/js/app.js",
           "@mifro/cart": "http://localhost:4200/main.js",
           "vue": "https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js",
           "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@3.1.5/dist/vue-router.min.js",
@@ -55,7 +55,22 @@
         }
       }
     </script>
-
+    <% } else { %>
+      <script type="systemjs-importmap">
+        {
+          "imports": {
+            "@mifro/root-config": "https://js-container.vercel.app/mifro-root-config.js",
+            "@mifro/nav": "https://js-nav.vercel.app/mifro-nav.js",
+            "@mifro/products": "https://js-product.vercel.app/js/app.js",
+            "@mifro/cart": "https://js-cart.vercel.app/main-es2015.js",
+            "vue": "https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js",
+            "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@3.1.5/dist/vue-router.min.js",
+            "react": "https://cdn.jsdelivr.net/npm/react@16.12.0/umd/react.production.min.js",
+            "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@16.12.0/umd/react-dom.production.min.js"
+          }
+        }
+      </script>
+    <% } %>
     <link
       href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
       rel="stylesheet"
@@ -65,12 +80,6 @@
     <script src="https://cdn.jsdelivr.net/npm/systemjs@6.3.1/dist/system.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/systemjs@6.3.1/dist/extras/amd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/systemjs@6.3.1/dist/extras/named-exports.js"></script>
-    <% } else { %>
-    <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@1.14.6/dist/import-map-overrides.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.3.1/dist/system.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.3.1/dist/extras/amd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.3.1/dist/extras/named-exports.min.js"></script>
-    <% } %>
   </head>
   <body>
     <script>

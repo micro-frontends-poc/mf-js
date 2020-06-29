@@ -1,6 +1,6 @@
 .cart-container {
-  --color-primary: #7500c0;
-  --color-secondary: #460073;
+  --color-primary: #FFC801;
+  --color-secondary: #b99100;
   &.light {
     --color-text: hsl(210, 29%, 24%);
     --color-bg: hsl(0, 0%, 100%);
@@ -15,6 +15,7 @@
   color: var(--color-text);
   background: var(--color-bg);
   padding: 1rem;
+  padding-top: 5rem;
   height: 100%;
   border-left: 1px solid #718096;
   @media screen and (max-width: 768px) {
@@ -91,5 +92,10 @@
       font-weight: bold;
       font-style: italic;
     }
+  }
+  .msg-empty-cart {
+    margin: auto;
+    font-weight: bold;
+
   }
 }

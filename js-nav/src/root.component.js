@@ -25,7 +25,7 @@ function Root() {
         mode === "dark" ? "bg-gray-900" : ""
       }`}
     >
-      <nav className="w-full flex items-center justify-between bg-purple-600 flex-wrap p-6 z-50">
+      <nav className="w-full flex items-center justify-between bg-yellow-600 flex-wrap p-6 z-50">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <span className="font-bold text-xl tracking-tight">MICROSHOP</span>
         </div>

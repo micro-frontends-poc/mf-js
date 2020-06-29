@@ -7,12 +7,10 @@
     "format": "prettier --write './**'",
     "test": "jest",
     "watch-tests": "jest --watch",
-    "coverage": "jest --coverage",
-    "prebuild": "SET NODE_ENV=production & npm run build:styles"
+    "coverage": "jest --coverage"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && concurrently npm:test npm:lint"
     }
   },
   "devDependencies": {

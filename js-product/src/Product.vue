@@ -31,8 +31,8 @@ export default {
 
 <style lang="scss">
 .product {
-  --color-primary: #14a523;
-  --color-secondary: #0f6818;
+  --color-primary: #FFC801;
+  --color-secondary: #FFC801;
   &.light {
     --color-text: hsl(210, 29%, 24%);
     --color-bg: hsl(0, 0%, 100%);

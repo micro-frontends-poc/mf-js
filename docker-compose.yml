@@ -3,7 +3,7 @@ services:
   container:
     container_name: js-container
     ports:
-      - "3020:3003"
+      - "3020:9000"
     build:
       context: ./js-container
       dockerfile: Dockerfile

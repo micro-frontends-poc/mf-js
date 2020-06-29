@@ -3,5 +3,5 @@ ADD . /var/app
 WORKDIR /var/app
 RUN npm install
 
-EXPOSE 3003
+EXPOSE 9000
 CMD npm start

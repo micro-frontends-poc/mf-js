@@ -16,7 +16,7 @@ const lifecycles = singleSpaAngular({
     singleSpaPropsSubject.next(singleSpaProps);
     return platformBrowserDynamic().bootstrapModule(AppModule);
   },
-  template: '<cart-root class="absolute top-0 right-0 w-full md:w-1/2"/>',
+  template: '<cart-root class="fixed top-0 right-0 w-full h-full md:w-1/2"/>',
   NgZone,
 });
 
